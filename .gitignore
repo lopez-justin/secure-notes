@@ -33,4 +33,4 @@ build/
 .vscode/
 
 ### Ignorar el archivo de dev.properties ###
-dev.properties
+/src/main/resources/dev.properties
