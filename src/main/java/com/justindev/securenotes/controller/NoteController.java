@@ -3,7 +3,6 @@ package com.justindev.securenotes.controller;
 import com.justindev.securenotes.model.Note;
 import com.justindev.securenotes.service.INoteService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
