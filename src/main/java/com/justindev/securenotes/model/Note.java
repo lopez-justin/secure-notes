@@ -12,7 +12,7 @@ public class Note {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long noteId;
 
-    @Lob
+    @Column(name = "content", columnDefinition="TEXT")
     private String content;
 
     private String ownerUsername;
