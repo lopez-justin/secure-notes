@@ -13,4 +13,14 @@ public interface IUserService {
 
     UserAdminResponseDTO getUserById(Long userId);
 
+    void updatePassword(Long userId, String password);
+
+    void updateAccountLockStatus(Long userId, boolean lock);
+
+    void updateAccountExpiryStatus(Long userId, boolean expire);
+
+    void updateAccountEnabledStatus(Long userId, boolean enabled);
+
+    void updateCredentialsExpiryStatus(Long userId, boolean expire);
+
 }
