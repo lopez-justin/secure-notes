@@ -1,20 +1,18 @@
 package com.justindev.securenotes.dto;
 
-import com.justindev.securenotes.model.Role;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.util.List;
 
-@NoArgsConstructor
 @AllArgsConstructor
-@Getter @Setter
-public class UserDTO {
+@Getter
+@Setter
+public class UserInfoResponseDTO {
 
-    private Long userId;
+    private Long id;
     private String username;
     private String email;
     private boolean accountNonLocked;
@@ -23,11 +21,8 @@ public class UserDTO {
     private boolean enabled;
     private LocalDate credentialsExpiryDate;
     private LocalDate accountExpiryDate;
-    private String twoFactorSecret;
-    private boolean twoFactorEnabled;
-    private String signUpMethod;
-    private Role role;
-    private LocalDateTime createdDate;
-    private LocalDateTime updatedDate;
+    private boolean isTwoFactorEnabled;
+    private List<String> roles;
+
 
 }

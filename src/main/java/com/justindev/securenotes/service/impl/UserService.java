@@ -1,6 +1,6 @@
 package com.justindev.securenotes.service.impl;
 
-import com.justindev.securenotes.dto.UserDTO;
+import com.justindev.securenotes.dto.UserAdminResponseDTO;
 import com.justindev.securenotes.model.AppRole;
 import com.justindev.securenotes.model.Role;
 import com.justindev.securenotes.model.User;
@@ -36,12 +36,12 @@ public class UserService implements IUserService {
     }
 
     @Override
-    public UserDTO getUserById(Long userId) {
+    public UserAdminResponseDTO getUserById(Long userId) {
         return this.convertToDTO(this.userRepository.findById(userId).orElseThrow());
     }
 
-    private UserDTO convertToDTO(User user) {
-        return new UserDTO(
+    private UserAdminResponseDTO convertToDTO(User user) {
+        return new UserAdminResponseDTO(
                 user.getUserId(),
                 user.getUsername(),
                 user.getEmail(),

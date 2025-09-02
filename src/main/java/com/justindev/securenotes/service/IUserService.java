@@ -1,6 +1,6 @@
 package com.justindev.securenotes.service;
 
-import com.justindev.securenotes.dto.UserDTO;
+import com.justindev.securenotes.dto.UserAdminResponseDTO;
 import com.justindev.securenotes.model.User;
 
 import java.util.List;
@@ -11,6 +11,6 @@ public interface IUserService {
 
     List<User> getAllUsers();
 
-    UserDTO getUserById(Long userId);
+    UserAdminResponseDTO getUserById(Long userId);
 
 }
